@@ -1,0 +1,15 @@
+{
+  "name": "lespetitsplats",
+  "version": "1.0.0",
+  "description": "P7 Openclassrooms",
+  "main": "js/index.js",
+  "scripts": {
+    "sass": "sass --watch sass/styles.scss css/style.css"
+  },
+  "author": "Lisitius",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^8.32.0",
+    "sass": "^1.57.1"
+  }
+}
