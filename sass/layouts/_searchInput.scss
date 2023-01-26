@@ -1,0 +1,29 @@
+@use "../base/" as b;
+
+.search-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: b.$colorInput;
+    padding: 5px 20px 5px 4px;
+    border-radius: 5px;
+    label {
+        display: none;
+    }
+    .__search {
+        background-color: transparent;
+        border: none;
+        padding: 20px;
+        width: 90%;
+        &[type="search"] {
+            @include b.normalLato;
+            color: black;
+        }
+        &::placeholder {
+            opacity: 0.5;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+}

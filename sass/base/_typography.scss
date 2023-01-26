@@ -1,0 +1,35 @@
+//google fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+//variable color
+$colorInput: #E7E7E7;
+
+//font-family
+$lato : "Lato", sans-serif;
+
+// Weights
+$hairline-weight: 100;
+$thin-weight:     200;
+$light-weight:    300;
+$normal-weight:   400;
+$medium-weight:   500;
+$semibold-weight: 600;
+$bold-weight:     700;
+$xbold-weight:    800;
+$black-weight:    900;
+
+//font-size
+
+//Mixins typography
+@mixin normalLato($size : 18px) {
+    font-family: "Lato", sans-serif;
+    font-weight: $normal-weight;
+    font-size: $size;
+}
+
+// @font-face {
+//     font-family: "Lato";
+//     font-weight: $normal-weight;
+//     src: url("../../assets/fonts/lato/Lato-Regular.ttf");
+// }
+
