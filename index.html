@@ -4,9 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Lato:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <title>Les petits plats</title>
   </head>
   <body>
+    <header>
+      <img src="./assets/logo/logo.png" alt="Logo Les petits plats" />
+    </header>
 
+    <main class="main">
+      <!-- search input -->
+      <div class="search-input">
+        <label for="search"></label>
+        <input
+          type="search"
+          id="search"
+          name="search"
+          placeholder="Recherche (minimum 3 caractères)"
+          minlength="3"/>
+      </div>
+      <!-- end search input -->
+
+      <!-- tags -->
+      <section class="tags">
+        <div class="input_tags">
+          <!-- ingredient tags -->
+          <div class="eachTags">
+            <div class="input-ingredient tag">
+              <label for="ingredients">
+                <input
+                  type="text"
+                  name="ingredients"
+                  id="ingredients"
+                  placeholder="Ingredients"
+                  required
+                  minlength="3"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- end of ingredient tags -->
+
+          <!-- devices tags -->
+          <div class="eachTags">
+            <div class="input-device tag">
+              <label for="devices">
+                <input
+                type="text"
+                name="devices"
+                id="devices"
+                placeholder="Appareils"
+                required
+                minlength="3"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- end of devices tags -->
+
+          <!-- ustensils tags -->
+          <div class="eachTags">
+            <div class="input-ustensils tag">
+              <label for="ustensils"></label>
+              <input 
+              type="text"
+              name="ustensils"
+              placeholder="Ustensiles"
+              required
+              minlength="3"
+              />
+            </div>
+          </div>
+          <!-- end of ustensils tags -->
+        </div>
+      </section>
+      <!-- end section -->
+    </main>
   </body>
 </html>
