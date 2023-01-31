@@ -19,7 +19,7 @@ header {
   text-align: center;
 }
 header img {
-  width: 120px;
+  width: 270px;
 }
 
 .search-input {
@@ -50,6 +50,15 @@ header img {
 }
 .search-input .__search:focus {
   outline: none;
+}
+.search-input .__searchBtn {
+  border: none;
+  background-color: #E7E7E7;
+  cursor: pointer;
+}
+.search-input .__searchBtn img {
+  width: 40px;
+  padding-top: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
