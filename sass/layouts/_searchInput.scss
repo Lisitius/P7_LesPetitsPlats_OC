@@ -26,4 +26,14 @@
             outline: none;
         }
     }
+
+    .__searchBtn {
+        border: none;
+        background-color: b.$colorInput;
+        cursor: pointer;
+            img {
+                width: 40px;
+                padding-top: 5px;
+            }
+        }
 }
