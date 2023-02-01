@@ -61,4 +61,55 @@ header img {
   padding-top: 5px;
 }
 
+.tags .input-tags {
+  margin-top: 10px;
+  display: flex;
+}
+.tags .input-tags .eachTags {
+  margin-right: 20px;
+  width: 180px;
+}
+
+.tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px 15px;
+}
+.tag .__text {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  width: 100px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: black;
+}
+.tag .__text::placeholder {
+  color: white;
+}
+.tag .__text:focus {
+  outline: none;
+}
+
+.input-ingredient {
+  background-color: #3282F7;
+}
+
+.input-device {
+  background-color: #68D9A4;
+}
+
+.input-ustensil {
+  background-color: #ED6454;
+}
+
+.button-up {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */

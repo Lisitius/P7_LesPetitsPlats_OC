@@ -26,27 +26,29 @@
           minlength="3"
           />
           <button class="__searchBtn">
-            <img src="./assets/logo/mg.png" alt="Loupe">
+            <img src="./assets/mg/mg.png" alt="Loupe">
           </button>
       </div>
       <!-- end search input -->
 
       <!-- tags -->
       <section class="tags">
-        <div class="input_tags">
+        <!--  -->
+        <div class="input-tags">
           <!-- ingredient tags -->
           <div class="eachTags">
             <div class="input-ingredient tag">
-              <label for="ingredients">
+              <label for="ingredients"></label>
                 <input
                   type="text"
+                  class="__text"
                   name="ingredients"
                   id="ingredients"
                   placeholder="Ingredients"
                   required
                   minlength="3"
                 />
-              </label>
+                <img src="./assets/arrow/arrowdown.png" class="button-up" alt="flèche">
             </div>
           </div>
           <!-- end of ingredient tags -->
@@ -54,31 +56,35 @@
           <!-- devices tags -->
           <div class="eachTags">
             <div class="input-device tag">
-              <label for="devices">
+              <label for="devices"></label>
                 <input
                 type="text"
+                class="__text"
                 name="devices"
                 id="devices"
                 placeholder="Appareils"
                 required
                 minlength="3"
                 />
-              </label>
+                <img src="./assets/arrow/arrowdown.png" class="button-up" alt="flèche">
             </div>
           </div>
           <!-- end of devices tags -->
 
           <!-- ustensils tags -->
           <div class="eachTags">
-            <div class="input-ustensils tag">
+            <div class="input-ustensil tag">
               <label for="ustensils"></label>
               <input 
               type="text"
+              class="__text"
+              id="ustensils"
               name="ustensils"
               placeholder="Ustensiles"
               required
               minlength="3"
               />
+              <img src="./assets/arrow/arrowdown.png" class="button-up" alt="flèche">
             </div>
           </div>
           <!-- end of ustensils tags -->
