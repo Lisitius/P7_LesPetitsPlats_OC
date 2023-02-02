@@ -112,4 +112,66 @@ header img {
   margin-bottom: 5px;
 }
 
+.full-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.container {
+  width: 450px;
+  height: 364px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.container .food {
+  height: 178px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+.container .bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 1fr;
+  gap: 5px 5px;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  background-color: #E7E7E7;
+  border-radius: 0 0 5px 5px;
+}
+.container .bottom-grid .card {
+  height: 109px;
+  text-align: left;
+  overflow: hidden;
+}
+.container .bottom-grid .card p {
+  padding: 3px;
+  margin: 0;
+}
+.container .bottom-grid .small {
+  height: 25px;
+  margin: 0;
+  padding: 0;
+}
+.container .bottom-grid .right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+.container .bottom-grid .right .clock {
+  width: 24px;
+  height: 24px;
+  margin-right: 2px;
+  margin-top: 1px;
+}
+
 /*# sourceMappingURL=style.css.map */
