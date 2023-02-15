@@ -43,6 +43,7 @@ function cardFactory(data) {
     const ingredientList = document.createElement("div");
     ingredientList.classList.add("card");
     const paragraphListIngredient = document.createElement("p");
+    paragraphListIngredient.classList.add("ingredient-list");
 
     //description text
     const divDescriptionRecipe = document.createElement("div");
@@ -65,12 +66,14 @@ function cardFactory(data) {
 
     data.ingredients.forEach((ingredient) => {
       let ingredientName = `${ingredient.ingredient}`;
-      let quantityText = `${ingredient.quantity}`;
-      if (quantityText === undefined) {
+      let quantityText;
+      if (ingredient.quantity) {
+        quantityText = ` : ${ingredient.quantity}`;
+      } else {
         quantityText = "";
       }
-      paragraphListIngredient.textContent =
-        ingredientName + " : " + quantityText;
+      paragraphListIngredient.innerHTML +=
+        ingredientName + quantityText + "<br>";
     });
 
     return containerCard;
