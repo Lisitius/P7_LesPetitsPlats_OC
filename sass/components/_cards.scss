@@ -6,6 +6,10 @@
   justify-content: space-around;
   flex-wrap: wrap;
   @include b.normalLato($size: 12px);
+  .error-message {
+    @include b.normalLato($size: 25px);
+    margin-top: 200px;
+  }
 }
 
 .container {

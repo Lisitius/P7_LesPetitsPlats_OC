@@ -121,6 +121,12 @@ header img {
   font-weight: 400;
   font-size: 12px;
 }
+.full-container .error-message {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  margin-top: 200px;
+}
 
 .container {
   width: 450px;
