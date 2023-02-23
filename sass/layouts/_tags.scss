@@ -1,0 +1,89 @@
+@use "../base/" as b;
+
+.section-tags {
+  margin-top: 3%;
+  .input-tags {
+    margin-top: 5px;
+    display: flex;
+  }
+  .tags_m {
+    margin-right: 20px;
+  }
+}
+
+.tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px 15px;
+  .__text {
+    background-color: transparent;
+    border: none;
+    &[type="text"] {
+      @include b.normalLato($size: 15px);
+      color: white;
+      outline: none;
+    }
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+
+.input-ingredient,
+.ingredients-list {
+  background-color: b.$ingredients;
+}
+.input-device,
+.devices-list {
+  background-color: b.$devices;
+}
+.input-ustensil,
+.ustensils-list {
+  background-color: b.$ustensils;
+}
+
+.none {
+  display: none;
+}
+
+.button-up {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+.ingredients-list,
+.devices-list,
+.ustensils-list {
+  width: 550px;
+  border-radius: 0 0 5px 5px;
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 220px;
+    max-width: 700px;
+    padding: 0 10px;
+    margin-top: -4px;
+    overflow: auto;
+    list-style: none;
+    color: white;
+    line-height: 30px;
+
+    li {
+      width: 130px;
+      height: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-left: 8px;
+      cursor: pointer;
+
+      &:hover {
+        border-radius: 5px;
+        background-color: rgba(245, 245, 245, 0.2);
+      }
+    }
+  }
+}

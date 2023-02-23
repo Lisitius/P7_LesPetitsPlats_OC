@@ -1,14 +1,14 @@
 // The "tagLists" function takes a list of recipes as an argument
 function tagLists(listRecipes) {
   // Retrieving lists of items from each category
-  const ingredientList = document.querySelector(".ingredient-list");
-  const deviceList = document.querySelector(".device-list");
-  const utensilList = document.querySelector(".ustensil-list");
+  const ingredientList = document.querySelector(".ingredients-list");
+  const deviceList = document.querySelector(".devices-list");
+  const ustensilList = document.querySelector(".ustensils-list");
 
-  // Creation of tables to store tags for each category (ingredients, appliances and utensils)
+  // Creation of tables to store tags for each category (ingredients, appliances and ustensils)
   const ingredientTags = [];
   const deviceTags = [];
-  const utensilTags = [];
+  const ustensilTags = [];
 
   // Loop for each recipe in the recipe list
   listRecipes.forEach((recipe) => {
@@ -25,11 +25,11 @@ function tagLists(listRecipes) {
       deviceTags.push(recipe.appliance.toLowerCase());
     }
 
-    // Loop for each recipe utensil
+    // Loop for each recipe ustensil
     recipe.ustensils.forEach((ustensil) => {
-      // Adding utensils in the "utensilTags" table if they are not already there
-      if (!utensilTags.includes(ustensil.toLowerCase())) {
-        utensilTags.push(ustensil.toLowerCase());
+      // Adding ustensils in the "ustensilTags" table if they are not already there
+      if (!ustensilTags.includes(ustensil.toLowerCase())) {
+        ustensilTags.push(ustensil.toLowerCase());
       }
     });
   });
@@ -55,12 +55,12 @@ function tagLists(listRecipes) {
       .join("") +
     "</ul>";
 
-  const utensilListHTML =
+  const ustensilListHTML =
     '<ul class="tag-list">' +
-    utensilTags
+    ustensilTags
       .map(
-        (utensil) =>
-          `<li class="utensil-tag element" categorie="utensil">${utensil}</li>`
+        (ustensil) =>
+          `<li class="ustensil-tag element" categorie="ustensil">${ustensil}</li>`
       )
       .join("") +
     "</ul>";
@@ -68,8 +68,95 @@ function tagLists(listRecipes) {
   // Inserting the HTML code in the corresponding lists
   ingredientList.innerHTML = ingredientListHTML;
   deviceList.innerHTML = deviceListHTML;
-  utensilList.innerHTML = utensilListHTML;
+  ustensilList.innerHTML = ustensilListHTML;
 }
 
 // Call of the "tagLists" function with the list of recipes "recipes"
 tagLists(recipes);
+
+////////////////////////////////////////////////////////////////
+
+// Select all elements with class "button-up"
+const btnModal = document.querySelectorAll(".button-up");
+
+// Select ingredient in html
+const modalbgIngredients = document.querySelector(".ingredients-list");
+const ingredientPlaceHolder = document.getElementsByName("ingredients");
+const ingredientDefaultPlaceholder = "Ingrédients";
+const ingredientAltPlaceholder = "Rechercher un ingrédient";
+
+// Select device in html
+const modalbgDevices = document.querySelector(".devices-list");
+const devicePlaceHolder = document.getElementsByName("devices");
+const deviceDefaultPlaceholder = "Appareils";
+const deviceAltPlaceholder = "Rechercher un appareil";
+
+// Select ustensil in html
+const modalbgUstensils = document.querySelector(".ustensils-list");
+const ustensilPlaceHolder = document.getElementsByName("ustensils");
+const ustensilDefaultPlaceholder = "Ustensiles";
+const ustensilAltPlaceholder = "Rechercher un ustensile";
+
+// Add a "click" event handler for each modal button
+btnModal.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    // If the user clicks on button-ingredients
+    if (e.target.classList.contains("button-ingredients")) {
+      // Replace the current placeholder with that of ingredientAltPlaceholder
+      ingredientPlaceHolder[0].placeholder = ingredientAltPlaceholder;
+
+      //If the modalbgIngredients is hidden
+      if (modalbgIngredients.classList.contains("none")) {
+        // Show modal ingredients
+        modalbgIngredients.classList.remove("none");
+        // rotate the button 180 degrees
+        btn.style.transform = "rotate(180deg)";
+      } else {
+        // Hide modal ingredients
+        modalbgIngredients.classList.add("none");
+        // Replace the current placeholder with ingredientDefaultPlaceholder (default placeholder)
+        ingredientPlaceHolder[0].placeholder = ingredientDefaultPlaceholder;
+        // Returns the button to its initial position
+        btn.style.transform = "rotate(0deg)";
+      }
+      // If the user clicks on button-devices
+    } else if (e.target.classList.contains("button-devices")) {
+      // Replace the current placeholder with that of deviceAltPlaceholder
+      devicePlaceHolder[0].placeholder = deviceAltPlaceholder;
+
+      // If the modalbgIngredients is hidden
+      if (modalbgDevices.classList.contains("none")) {
+        // Show modal devices
+        modalbgDevices.classList.remove("none");
+        // rotate the button 180 degrees
+        btn.style.transform = "rotate(180deg)";
+      } else {
+        // Hide modal ingredients
+        modalbgDevices.classList.add("none");
+        // Replace the current placeholder with deviceDefaultPlaceholder (default placeholder)
+        devicePlaceHolder[0].placeholder = deviceDefaultPlaceholder;
+        // Returns the button to its initial position
+        btn.style.transform = "rotate(0deg)";
+      }
+      // If the user clicks on button-devices
+    } else if (e.target.classList.contains("button-ustensils")) {
+      // Replace the current placeholder with that of ustensilAltPlaceholder
+      ustensilPlaceHolder[0].placeholder = ustensilAltPlaceholder;
+
+      // If the modalbgIngredients is hidden
+      if (modalbgUstensils.classList.contains("none")) {
+        // Show modal ustensils
+        modalbgUstensils.classList.remove("none");
+        // rotate the button 180 degrees
+        btn.style.transform = "rotate(180deg)";
+      } else {
+        // Hide modal ingredients
+        modalbgUstensils.classList.add("none");
+        // Replace the current placeholder with ustensilDefaultPlaceholder (default placeholder)
+        ustensilPlaceHolder[0].placeholder = ustensilDefaultPlaceholder;
+        // Returns the button to its initial position
+        btn.style.transform = "rotate(0deg)";
+      }
+    }
+  });
+});
