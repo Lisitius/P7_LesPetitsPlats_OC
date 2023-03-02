@@ -30,9 +30,6 @@ header img {
   padding: 5px 20px 5px 4px;
   border-radius: 5px;
 }
-.search-input label {
-  display: none;
-}
 .search-input .__search {
   background-color: transparent;
   border: none;
@@ -74,7 +71,6 @@ header img {
 
 .tag {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   border-radius: 5px;
   padding: 20px 15px;
@@ -117,6 +113,7 @@ header img {
   width: 20px;
   height: 20px;
   margin-bottom: 5px;
+  margin-left: auto;
 }
 
 .ingredients-list,
