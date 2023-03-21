@@ -3,9 +3,8 @@ const inputSearch = document.querySelector("#search");
 function filterRecipes() {
   const searchValue = inputSearch.value.toLowerCase();
   const allTags = document.querySelectorAll(".tags");
-  const filteredRecipes = [];
 
-  recipes.forEach((recipe) => {
+  const filteredRecipes = recipes.filter((recipe) => {
     const name = recipe.name.toLowerCase();
     const ingredients = recipe.ingredients.map((ingredient) =>
       ingredient.ingredient.toLowerCase()
@@ -36,12 +35,11 @@ function filterRecipes() {
       }
     });
 
-    if (searchMatches && tagMatches) {
-      filteredRecipes.push(recipe);
-    }
+    return searchMatches && tagMatches;
   });
 
   return filteredRecipes;
 }
 
 export { filterRecipes };
+
