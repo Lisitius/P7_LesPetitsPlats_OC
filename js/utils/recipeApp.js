@@ -1,3 +1,4 @@
+import { displayAllRecipe } from "../index.js";
 import { createTag } from "./createTag.js";
 import { filterRecipes } from "./searchRecipes.js";
 import { updateFilterElements } from "./updateFilterElements.js";
@@ -9,7 +10,8 @@ const tagElements = document.querySelectorAll(".element");
 
 const errorMessage = document.createElement("p");
 errorMessage.classList.add("error-message");
-errorMessage.textContent = "Aucune recette ne correspond à votre recherche.";
+errorMessage.textContent =
+  "Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson »";
 
 function displayFilteredRecipes(filteredRecipes) {
   displayAllRecipe(filteredRecipes);
