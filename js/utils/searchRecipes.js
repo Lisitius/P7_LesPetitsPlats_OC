@@ -5,6 +5,10 @@ function filterRecipes() {
   const searchValue = inputSearch.value.toLowerCase();
   const allTags = document.querySelectorAll(".tags");
 
+  if (searchValue.length < 3) {
+    return recipes;
+  }
+
   // Initialize an array to store filtered recipe
   const filteredRecipes = [];
 
