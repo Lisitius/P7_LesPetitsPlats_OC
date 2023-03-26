@@ -4,6 +4,10 @@ function filterRecipes() {
   const searchValue = inputSearch.value.toLowerCase();
   const allTags = document.querySelectorAll(".tags");
 
+  if (searchValue.length < 3) {
+    return recipes;
+  }
+
   // Filter the recipes array based on search value and selected tags
   const filteredRecipes = recipes.filter((recipe) => {
     // Convert the recipe name, ingredients, and description to lower case
@@ -43,9 +47,9 @@ function filterRecipes() {
     // Return true if both search and tags match the recipe, false otherwise
     return searchMatches && tagMatches;
   });
+  console.log(filteredRecipes);
 
   return filteredRecipes;
 }
 
 export { filterRecipes };
-
