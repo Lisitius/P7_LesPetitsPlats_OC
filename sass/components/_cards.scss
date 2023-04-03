@@ -37,6 +37,16 @@
     padding: 10px;
     background-color: b.$colorInput;
     border-radius: 0 0 5px 5px;
+    .description {
+      align-self: start;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 6;
+      max-height: 109px;
+      margin: 0;
+    }
     .card {
       height: 109px;
       text-align: left;
@@ -50,9 +60,12 @@
       }
     }
     .small {
-      height: 25px;
+      height: 40px;
       margin: 0;
       padding: 0;
+      .title {
+        font-size: 16px;
+      }
     }
     .right {
       display: flex;
@@ -60,10 +73,9 @@
       justify-content: flex-end;
       font-weight: bold;
       .clock {
-        width: 24px;
-        height: 24px;
-        margin-right: 2px;
-        margin-top: 1px;
+        width: 18px;
+        height: 18px;
+        margin-top: 2px;
       }
     }
   }
