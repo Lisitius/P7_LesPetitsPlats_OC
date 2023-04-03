@@ -7,6 +7,7 @@ const inputSearch = document.querySelector("#search");
 const fullContainer = document.querySelector(".full-container");
 
 const tagElements = document.querySelectorAll(".element");
+const searchValue = inputSearch.value.toLowerCase();
 
 const errorMessage = document.createElement("p");
 errorMessage.classList.add("error-message");
@@ -27,6 +28,7 @@ function displayFilteredRecipes(filteredRecipes) {
 }
 
 inputSearch.addEventListener("input", () => {
+  if (searchValue < 3) return;
   const filteredRecipes = filterRecipes();
   displayFilteredRecipes(filteredRecipes);
 });

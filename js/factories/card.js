@@ -26,6 +26,7 @@ function cardFactory(data) {
     divNameRecipe.classList.add("card");
     divNameRecipe.classList.add("small");
     const nameRecipe = document.createElement("p");
+    nameRecipe.classList.add("title");
     nameRecipe.textContent = name;
 
     //time
@@ -34,10 +35,11 @@ function cardFactory(data) {
     divTime.classList.add("small");
     divTime.classList.add("right");
     const imgClock = document.createElement("img");
+    imgClock.classList.add("clock");
     imgClock.setAttribute("src", "assets/clock/clock.png");
     imgClock.setAttribute("alt", "image horloge");
     const timer = document.createElement("p");
-    timer.textContent = time;
+    timer.textContent = time + " minutes";
 
     //ingredients list
     const ingredientList = document.createElement("div");
@@ -46,10 +48,9 @@ function cardFactory(data) {
     paragraphListIngredient.classList.add("ingredient-list");
 
     //description text
-    const divDescriptionRecipe = document.createElement("div");
-    divDescriptionRecipe.classList.add("card");
-    const descriptionRecipe = document.createElement("p");
-    descriptionRecipe.textContent = description;
+    const divDescriptionRecipe = document.createElement("p");
+    divDescriptionRecipe.classList.add("description");
+    divDescriptionRecipe.textContent = description;
 
     //
     containerCard.appendChild(imgCard);
@@ -62,7 +63,6 @@ function cardFactory(data) {
     divTime.appendChild(imgClock);
     divTime.appendChild(timer);
     ingredientList.appendChild(paragraphListIngredient);
-    divDescriptionRecipe.appendChild(descriptionRecipe);
 
     data.ingredients.forEach((ingredient) => {
       let ingredientName = `${ingredient.ingredient}`;

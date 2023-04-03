@@ -226,6 +226,16 @@ header img {
   background-color: #e7e7e7;
   border-radius: 0 0 5px 5px;
 }
+.container .bottom-grid .description {
+  align-self: start;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 6;
+  max-height: 109px;
+  margin: 0;
+}
 .container .bottom-grid .card {
   height: 109px;
   text-align: left;
@@ -239,9 +249,12 @@ header img {
   white-space: normal;
 }
 .container .bottom-grid .small {
-  height: 25px;
+  height: 40px;
   margin: 0;
   padding: 0;
+}
+.container .bottom-grid .small .title {
+  font-size: 16px;
 }
 .container .bottom-grid .right {
   display: flex;
@@ -250,10 +263,9 @@ header img {
   font-weight: bold;
 }
 .container .bottom-grid .right .clock {
-  width: 24px;
-  height: 24px;
-  margin-right: 2px;
-  margin-top: 1px;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */
