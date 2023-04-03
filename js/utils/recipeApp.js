@@ -7,12 +7,11 @@ const inputSearch = document.querySelector("#search");
 const fullContainer = document.querySelector(".full-container");
 
 const tagElements = document.querySelectorAll(".element");
-const searchValue = inputSearch.value.toLowerCase();
 
 const errorMessage = document.createElement("p");
 errorMessage.classList.add("error-message");
 errorMessage.textContent =
-  "Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson »";
+  "Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson » etc...";
 
 function displayFilteredRecipes(filteredRecipes) {
   displayAllRecipe(filteredRecipes);
@@ -28,7 +27,6 @@ function displayFilteredRecipes(filteredRecipes) {
 }
 
 inputSearch.addEventListener("input", () => {
-  if (searchValue < 3) return;
   const filteredRecipes = filterRecipes();
   displayFilteredRecipes(filteredRecipes);
 });
