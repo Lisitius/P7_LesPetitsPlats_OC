@@ -20,11 +20,39 @@ function handleModal() {
   const ustensilDefaultPlaceholder = "Ustensiles";
   const ustensilAltPlaceholder = "Rechercher un ustensile";
 
+  function closeOtherModals(modalToKeepOpen, buttonToKeepRotated) {
+    const allModals = [modalbgIngredients, modalbgDevices, modalbgUstensils];
+    const allPlaceholders = [
+      ingredientPlaceHolder,
+      devicePlaceHolder,
+      ustensilPlaceHolder,
+    ];
+    const defaultPlaceholders = [
+      ingredientDefaultPlaceholder,
+      deviceDefaultPlaceholder,
+      ustensilDefaultPlaceholder,
+    ];
+    const allButtons = Array.from(btnModal);
+  
+    allModals.forEach((modal, index) => {
+      if (modal !== modalToKeepOpen && !modal.classList.contains("none")) {
+        modal.classList.add("none");
+        allPlaceholders[index][0].placeholder = defaultPlaceholders[index];
+        // Remettre le bouton dans sa position initiale
+        allButtons[index].style.transform = "rotate(0deg)";
+      } else if (modal === modalToKeepOpen) {
+        // Rotation du bouton actif
+        buttonToKeepRotated.style.transform = "rotate(180deg)";
+      }
+    });
+  }
+  
   // Add a "click" event handler for each modal button
   btnModal.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       // If the user clicks on button-ingredients
       if (e.target.classList.contains("button-ingredients")) {
+        closeOtherModals(modalbgIngredients, btn);
         // Replace the current placeholder with that of ingredientAltPlaceholder
         ingredientPlaceHolder[0].placeholder = ingredientAltPlaceholder;
 
@@ -44,6 +72,7 @@ function handleModal() {
         }
         // If the user clicks on button-devices
       } else if (e.target.classList.contains("button-devices")) {
+        closeOtherModals(modalbgDevices, btn);
         // Replace the current placeholder with that of deviceAltPlaceholder
         devicePlaceHolder[0].placeholder = deviceAltPlaceholder;
 
@@ -63,6 +92,7 @@ function handleModal() {
         }
         // If the user clicks on button-devices
       } else if (e.target.classList.contains("button-ustensils")) {
+        closeOtherModals(modalbgUstensils, btn);
         // Replace the current placeholder with that of ustensilAltPlaceholder
         ustensilPlaceHolder[0].placeholder = ustensilAltPlaceholder;
 
