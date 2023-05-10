@@ -8,7 +8,7 @@
 <h2>Projet 7 - Les petits plats</h2>
 
 <p align="center">
-    <img src="https://gndz07.github.io/GinaAdzani_7_18122020/logo_lespetitsplats.png"
+    <img src="https://i.postimg.cc/kM8jXZR0/68747470733a2f2f676e647a30372e6769746875622e696f2f47696e6141647a616e695f375f31383132323032302f6c6f67.png"
     alt="logo les petits plats" />
 </p>
 
