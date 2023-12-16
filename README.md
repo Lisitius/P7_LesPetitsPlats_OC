@@ -1,7 +1,4 @@
-<p align="center">
-    <img src="https://www.anaf.fr/wp-content/uploads/2020/09/OpenClassroom_LOGO.png"
-    alt="logo openclassrooms" />
-</p>
+https://wondrous-maamoul-f3fa67.netlify.app/
 
 <h1>Formation développeur d'application - JavaScript React</h1>
 
